@@ -37,8 +37,8 @@ main{
     align-items: center;
     justify-content: space-between;
     background-color: var(--soft-red);
-    min-width: 60%;
-    height: 12vh;
+    min-width: 25%;
+    height: 10vh;
     min-height: 12%;
     border-radius: 15px;
 }
@@ -57,8 +57,8 @@ p{
     box-sizing: border-box;
     padding: 1.5rem;
     border-radius: 15px;
-    min-width: 60%;
-    height: 48vh;
+    min-width: 25%;
+    height: 52vh;
     min-height: 12%;
     background-color: white;
 }
@@ -84,25 +84,29 @@ h3{
 .week_days{
     margin-top: 6px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     gap: 5px;
     color: var(--medium-brown);
+    width: 100%;
+    
 }
 
+
 .bars{
+    margin-left: 0.12rem;
+    text-align: center;
     display: flex;
     gap: 5px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-end;
-    border : 2px solid blue;
     height: 70%;
     width: 100%;
 }
-.week_days{
-    height: 30%;
-}
 .bar{
-    background-color: green;
+    background-color: var(--soft-red);
+}
+.bar:hover{
+    background-color: var(--cyan);
 }
 
 
@@ -110,42 +114,68 @@ h3{
  height: 2.5rem;
  width: var(--bar-width);
  border-radius: 10px;
- background-color: var(--soft-red);
+ 
 }
 
 #tuesday{
     height: 3rem;
     width: var(--bar-width);
     border-radius: 7px;
-    background-color: var(--soft-red);
 }
 #wednesday{
     height: 3.5rem;
     width: var(--bar-width);
     border-radius: 7px;
-    background-color: var(--soft-red);
 }
 #thursday{
     height: 2.8rem;
     width: var(--bar-width);
     border-radius: 7px;
-    background-color: var(--soft-red);
 }
 #friday{
     height: 2.4rem;
     width: var(--bar-width);
     border-radius: 7px;
-    background-color: var(--soft-red);
 }
 #saturday{
     height: 3.2rem;
     width: var(--bar-width);
     border-radius: 7px;
-    background-color: var(--soft-red);
 }
 #sunday{
     height: 2.5rem;
     width: var(--bar-width);
-    border-radius: 7px;  
-    background-color: var(--soft-red); 
+    border-radius: 7px;   
+}
+
+
+#line{
+    background-color : red;
+}
+
+.total{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.total_history{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.total_text{
+    font-size: 1rem;
+    font-family: var(--font-family);
+    color: var(--medium-brown);
+}
+.total_month-value{
+    margin: 0;
+    font-size: 2rem;
+    font-family: var(--font-family);
+    color: var(--dark-brown);
+}
+.total_history-percentage{
+    font-size: 1rem;
+    font-family: var(--font-family);
+    color: var(--dark-brown);
 }
