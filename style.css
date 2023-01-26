@@ -54,13 +54,17 @@ p{
 }
 
 .spending{
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     padding: 1.5rem;
     border-radius: 15px;
     min-width: 25%;
-    height: 52vh;
     min-height: 12%;
     background-color: white;
+}
+.spending:first-of-type{
+    row-gap: 1.5rem;
 }
 .total_month{
     background-color: white;
@@ -75,10 +79,8 @@ h3{
 
 .container{
     box-sizing: border-box;
-    display: flex;
-    height: 30vh;
+    height: min-content;
     min-width: 60%;
-    flex-direction: column;
 }
 
 .week_days{
@@ -93,7 +95,6 @@ h3{
 
 
 .bars{
-    margin-left: 0.12rem;
     text-align: center;
     display: flex;
     gap: 5px;
@@ -104,6 +105,10 @@ h3{
 }
 .bar{
     background-color: var(--soft-red);
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: var(--font-family);
+    border-radius: 5px;
 }
 .bar:hover{
     background-color: var(--cyan);
@@ -111,41 +116,120 @@ h3{
 
 
 #monday{
+
+ position: relative;
  height: 2.5rem;
  width: var(--bar-width);
- border-radius: 10px;
- 
+
+}
+#monday:hover::before{
+    transition: 0.5s;
+    position: absolute;
+    content: "$17.45";
+    top: -30px;
+    left: -3px;
+    width: fit-content;
+    padding: 0.2rem;
+    border-radius: 4px;
+    background-color: var(--dark-brown);
+    color: white;
 }
 
 #tuesday{
-    height: 3rem;
+    height: 5rem;
     width: var(--bar-width);
-    border-radius: 7px;
+    
+}
+#tuesday:hover::before{
+    position: absolute;
+    content: "$34.91";
+    width: fit-content;
+    top: 250px;
+    left: 805px;
+    padding: 0.2rem;
+    border-radius: 4px;
+    background-color: var(--dark-brown);
+    color: white;
 }
 #wednesday{
-    height: 3.5rem;
+    height: 7rem;
     width: var(--bar-width);
-    border-radius: 7px;
+    
+}
+#wednesday:hover::before{
+    position: absolute;
+    content: "$52.36";
+    width: fit-content;
+    top: 215px;
+    left: 863px;
+    padding: 0.2rem;
+    border-radius: 4px;
+    background-color: var(--dark-brown);
+    color: white;
 }
 #thursday{
-    height: 2.8rem;
+    height: 4.5rem;
     width: var(--bar-width);
-    border-radius: 7px;
+    
+}
+#thursday:hover::before{
+    position: absolute;
+    content: "$31.07";
+    width: fit-content;
+    top: 255px;
+    left: 926px;
+    padding: 0.2rem;
+    border-radius: 4px;
+    background-color: var(--dark-brown);
+    color: white;
 }
 #friday{
-    height: 2.4rem;
+    height: 3.9rem;
     width: var(--bar-width);
-    border-radius: 7px;
+    
+}
+#friday:hover::before{
+    position: absolute;
+    content: "$23.39";
+    width: fit-content;
+    top: 265px;
+    left: 985px;
+    padding: 0.2rem;
+    border-radius: 4px;
+    background-color: var(--dark-brown);
+    color: white;
 }
 #saturday{
-    height: 3.2rem;
+    height: 6rem;
     width: var(--bar-width);
-    border-radius: 7px;
+    
+}
+#saturday:hover::before{
+    position: absolute;
+    content: "$43.28";
+    width: fit-content;
+    top: 230px;
+    left: 1050px;
+    padding: 0.2rem;
+    border-radius: 4px;
+    background-color: var(--dark-brown);
+    color: white;
 }
 #sunday{
-    height: 2.5rem;
+    height: 4.2rem;
     width: var(--bar-width);
-    border-radius: 7px;   
+       
+}
+#sunday:hover::before{
+    position: absolute;
+    content: "$25.48";
+    width: fit-content;
+    top: 255px;
+    left: 1105px;
+    padding: 0.2rem;
+    border-radius: 4px;
+    background-color: var(--dark-brown);
+    color: white;
 }
 
 
@@ -163,6 +247,9 @@ h3{
     flex-direction: column;
     justify-content: center;
 }
+.total_month{
+    margin-top: 1rem;
+}
 .total_text{
     font-size: 1rem;
     font-family: var(--font-family);
@@ -178,4 +265,8 @@ h3{
     font-size: 1rem;
     font-family: var(--font-family);
     color: var(--dark-brown);
+}
+
+.line{
+    border-top: 1px solid var(--cream);
 }
